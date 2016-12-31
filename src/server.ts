@@ -6,7 +6,7 @@ const app = new Koa()
 const router = new Router()
 
 router.get('/', function * (next) {
-  this.body = 'hello, world2.'
+  this.body = 'hello, world3.'
 })
 
 app.use(router.routes())
