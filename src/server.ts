@@ -5,15 +5,8 @@ import 'source-map-support/register'
 const app = new Koa()
 const router = new Router()
 
-function sleep() {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000)
-  })
-}
-
 router.get('/', function * (next) {
-  const wait = yield sleep()
-  this.body = 'hello, world.'
+  this.body = 'hello, world2.'
 })
 
 app.use(router.routes())
